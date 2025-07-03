@@ -37,3 +37,25 @@ vendas <- vendas[-4] # Removendo o último valor
 vendas[4] <- 70 # Incluindo um valor
 
 vendas[5:7] <- c(30, 06, 25) # Incluindo valores em intervalo
+
+# Operações
+
+length(vendas) # Tamanho
+
+vendas + 2 # Somando duas unidades em todo o vetor
+
+log(vendas) # Logarítmo
+
+mean(vendas) # Média
+
+max(vendas) # Máximo
+
+min (vendas) # Mínimo
+
+sqrt(vendas) # Raiz quadrada
+
+sort(vendas) # Ordenação crescente
+
+sort(vendas, decreasing = T) # Ordenação decrescente
+
+vendas <- vendas + vendas * 2 # Atualizando os valores
