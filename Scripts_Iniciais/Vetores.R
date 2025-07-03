@@ -59,3 +59,23 @@ sort(vendas) # Ordenação crescente
 sort(vendas, decreasing = T) # Ordenação decrescente
 
 vendas <- vendas + vendas * 2 # Atualizando os valores
+
+# União, interseção e diferenças
+
+vendedorA <- c("Apple", "Microsoft", "Lenovo")
+
+vendedorB <- c("Samsung", "Apple", "Motorola")
+
+union(vendedorA, vendedorB)
+
+intersect(vendedorA, vendedorB)
+
+setdiff(vendedorA, vendedorB) # A ordem importa
+
+arroz <- c("Camil", "Tio João", "Prato Fino")
+feijão <- c("Kicaldo", "Milano", "Urbano")
+interaction(arroz, feijão)
+
+a <- c("Camisa","Regata")
+b <- c("Calça","Shorts", "Moletom")
+expand.grid(a, b)
