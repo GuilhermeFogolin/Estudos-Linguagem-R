@@ -24,3 +24,12 @@ generoFator[length(generoFator)] # Última posição
 # Modificação
 
 generoFator[1] <- 3 # Alterando na posição 1
+
+# Operações
+
+produtos_online <- factor(c("Creme", "Pente", "Pente", "Escova", "Creme", "Creme"))
+produtos_presencial <- factor(c("Pente", "Pente", "Creme", "Escova", "Fio-dental"))
+
+library(forcats)
+
+vendas <- fct_c(produtos_online, produtos_presencial) # Combinando fatores
