@@ -34,3 +34,9 @@ total[1, 2, 3] # Linha 1, coluna 2, 3a matriz
 total[,,2] # Segunda matriz
 total[,2,] # Coluna 2 de cada matriz
 total[1,,] # Linha 1 de cada tabela
+
+# Combinação
+
+total[,2,1] # Primeira matriz, segunda coluna
+total[1,,2] # Segunda matriz, primeira linha
+total[1,2,3] # Primeira linha, segunda coluna, terceira matriz
