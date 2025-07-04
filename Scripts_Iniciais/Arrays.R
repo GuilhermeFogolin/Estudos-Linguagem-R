@@ -40,3 +40,10 @@ total[1,,] # Linha 1 de cada tabela
 total[,2,1] # Primeira matriz, segunda coluna
 total[1,,2] # Segunda matriz, primeira linha
 total[1,2,3] # Primeira linha, segunda coluna, terceira matriz
+
+# Modificação
+
+total[2, 2, 3] <- "Café" # Alteranso 2a linha, 2a coluna e 3a matriz
+total[1, , 3] <- c(99, "Suco") # Alterando uma linha inteira
+total[2:3, 2, 2] <- c("Banana", "Filtro") # Alterando intervalo de linhas
+total[c(1, 3), 2, 2] <- c("Água", "Abacate") # Alterando elementos específicos
