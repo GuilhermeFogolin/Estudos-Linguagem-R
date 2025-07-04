@@ -40,3 +40,10 @@ plot(grafico) # Plotando gráfico
 
 grafico2 <- fct_recode(generoFator, Masculino = "1", Feminino = "2") # Alterando somente dois label
 plot(grafico2)
+
+# Agrupamento de níveis
+
+como_soube <- factor(c("LinkedIn", "linkedin", "linkedIn", "insta", "ig", "Instagram"))
+
+fct_collapse(como_soube, LinkedIn = c("LinkedIn", "linkedin", "linkedIn"),
+             Instagram = c("insta", "ig", "Instagram"))
