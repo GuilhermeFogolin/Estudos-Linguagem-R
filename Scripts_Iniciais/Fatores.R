@@ -23,7 +23,7 @@ generoFator[length(generoFator)] # Última posição
 
 # Modificação
 
-generoFator[1] <- 3 # Alterando na posição 1
+generoFator[1] <- 1 # Alterando na posição 1
 
 # Operações
 
@@ -33,3 +33,7 @@ produtos_presencial <- factor(c("Pente", "Pente", "Creme", "Escova", "Fio-dental
 library(forcats)
 
 vendas <- fct_c(produtos_online, produtos_presencial) # Combinando fatores
+
+grafico <- lvls_revalue(generoFator, c("Masculino", "Feminino", "Outros")) # Alterando label
+
+plot(grafico) # Plotando gráfico
