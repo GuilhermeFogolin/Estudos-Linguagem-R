@@ -24,3 +24,16 @@ balanço2 <- list(ID = idCliente, Nomes = clientes, Quantidades = qtde, Cliente_
 # Nomeando depois de criado
 
 names(balanço) <- c("ID", "Nomes", "Quantidades", "Cliente Novo?")
+
+# Acesso
+
+# Pelo nome
+
+balanço$Nomes
+balanço$ID
+
+balanço$Nomes[2] # Acessando o 2o elemento do vetor
+
+balanço$Nomes[2:4] # Intervalo
+
+balanço[[1]] # Pela posição dos objetos
