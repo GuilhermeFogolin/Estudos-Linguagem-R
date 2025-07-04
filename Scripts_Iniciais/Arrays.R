@@ -52,3 +52,23 @@ total[c(1, 3), 2, 2] <- c("Água", "Abacate") # Alterando elementos específicos
 
 sum(as.numeric(total[,1,])) # Somando 1a coluna das 3 matrizes
 max(as.numeric(total[,1, 3])) # Número máximo
+
+# Extra de operações
+
+vendas_sem1 <- c(14, 34, 23)
+vendas_sem2 <- vendas_sem1 * 2
+vendas_sem3 <- vendas_sem2 + 21
+vendas_sem4 <- vendas_sem1 * 3
+
+nomesColunas <- c("Sem 1", "Sem 2", "Sem 3", "Sem 4")
+nomesLinhas <- c("Fogolin", "Maria", "Pedro")
+nomesMatrizes <- c("Janeiro", "Fevereiro", "Março")
+
+vendasFinais <- array(c(vendas_sem1, vendas_sem2, vendas_sem3, vendas_sem4), dim = c(3, 4, 3), 
+                      dimnames = list(nomesLinhas, nomesColunas, nomesMatrizes))
+
+apply(vendasFinais, 2, sum) # Somando todas as colunas
+
+apply(vendasFinais, 1, sum) # Somando todas as linhas
+
+apply(vendasFinais, 2, mean) # Média das colunas
