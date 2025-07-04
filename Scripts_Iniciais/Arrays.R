@@ -47,3 +47,8 @@ total[2, 2, 3] <- "Café" # Alteranso 2a linha, 2a coluna e 3a matriz
 total[1, , 3] <- c(99, "Suco") # Alterando uma linha inteira
 total[2:3, 2, 2] <- c("Banana", "Filtro") # Alterando intervalo de linhas
 total[c(1, 3), 2, 2] <- c("Água", "Abacate") # Alterando elementos específicos
+
+# Operações
+
+sum(as.numeric(total[,1,])) # Somando 1a coluna das 3 matrizes
+max(as.numeric(total[,1, 3])) # Número máximo
