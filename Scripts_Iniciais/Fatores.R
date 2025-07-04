@@ -62,3 +62,15 @@ ordem <- fct_relevel(escolaridade, c("Fundamental incompleto", "Fundamental", "E
 faturamento <- c(30, 23, 45, 66, 77, 88, 12, 5)
 
 fct_reorder(escolaridade, faturamento, mean) # Ordem dos níveis com base na média
+
+# Exercícios
+
+# 01
+
+f <- gl(3, 2, labels = c("Recife", "Rio de Janeiro", "Brasília"))
+
+# 02
+
+resultado <- as.factor(c("Aprovado","Reprovado","Reprovado","Reprovado",
+                       "Reprovado","Aprovado","Reprovado","Reprovado",
+                       "Aprovado","Reprovado","Aprovado","Aprovado"))
