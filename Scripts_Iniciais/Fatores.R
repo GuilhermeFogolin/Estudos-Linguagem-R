@@ -4,7 +4,7 @@ install.packages("forcats")
 
 # Criação
 
-genero <- c("2", "1", "2", "2", "1", "3")
+genero <- c("2", "1", "2", "2", "1", "3", "2", "3", "3", "1", "1")
 str(genero)
 
 generoFator <- as.factor(genero) # Criando o fator
@@ -37,3 +37,6 @@ vendas <- fct_c(produtos_online, produtos_presencial) # Combinando fatores
 grafico <- lvls_revalue(generoFator, c("Masculino", "Feminino", "Outros")) # Alterando label
 
 plot(grafico) # Plotando gráfico
+
+grafico2 <- fct_recode(generoFator, Masculino = "1", Feminino = "2") # Alterando somente dois label
+plot(grafico2)
