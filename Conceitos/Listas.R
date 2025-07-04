@@ -37,3 +37,8 @@ balanço$Nomes[2] # Acessando o 2o elemento do vetor
 balanço$Nomes[2:4] # Intervalo
 
 balanço[[1]] # Pela posição dos objetos
+
+# Modificação
+
+balanço$Nomes[3] <- "Fogolin" # Mudando um nome
+balanço$Nomes[c(1, 2)] <- c("Regiane", "Danyel") # Dois nomes
