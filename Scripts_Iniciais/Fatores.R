@@ -47,3 +47,7 @@ como_soube <- factor(c("LinkedIn", "linkedin", "linkedIn", "insta", "ig", "Insta
 
 fct_collapse(como_soube, LinkedIn = c("LinkedIn", "linkedin", "linkedIn"),
              Instagram = c("insta", "ig", "Instagram"))
+
+estadoCivil <- factor(c("Solteiro", "Solteira", "Casado", "União estável", "Casado", "Viúvo", "Viúvo", "Solteiro"))
+
+fct_lump(estadoCivil, 2, other_level = "Outros") # Agrupamento por nível mais frequente com dois níveis
