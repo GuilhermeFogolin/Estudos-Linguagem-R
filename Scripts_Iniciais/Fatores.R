@@ -51,3 +51,10 @@ fct_collapse(como_soube, LinkedIn = c("LinkedIn", "linkedin", "linkedIn"),
 estadoCivil <- factor(c("Solteiro", "Solteira", "Casado", "União estável", "Casado", "Viúvo", "Viúvo", "Solteiro"))
 
 fct_lump(estadoCivil, 2, other_level = "Outros") # Agrupamento por nível mais frequente com dois níveis
+
+# Reordenando níveis
+
+escolaridade <- factor(c("Superior", "Fundamental", "Fundamental", "Pós-graduado",
+                         "Ensino médio", "Ensino médio", "Superior", "Fundamental incompleto"))
+
+ordem <- fct_relevel(escolaridade, c("Fundamental incompleto", "Fundamental", "Ensino médio", "Superior", "Pós-graduado"))
