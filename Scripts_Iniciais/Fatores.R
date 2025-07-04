@@ -58,3 +58,7 @@ escolaridade <- factor(c("Superior", "Fundamental", "Fundamental", "Pós-graduad
                          "Ensino médio", "Ensino médio", "Superior", "Fundamental incompleto"))
 
 ordem <- fct_relevel(escolaridade, c("Fundamental incompleto", "Fundamental", "Ensino médio", "Superior", "Pós-graduado"))
+
+faturamento <- c(30, 23, 45, 66, 77, 88, 12, 5)
+
+fct_reorder(escolaridade, faturamento, mean) # Ordem dos níveis com base na média
