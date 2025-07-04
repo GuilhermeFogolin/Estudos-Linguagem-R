@@ -37,3 +37,24 @@ vendas_Fev[c(1, 4), 1] <- c("TV", "Computador") # Alterando linha 1 e 4
 vendas_Fev[, -1] # Excluindo coluna 1
 vendas_Fev[-2, ] # Excluindo linhas 2
 vendas_Fev[-2, -2] # Excluindo linha e coluna
+
+# Operações
+
+fogolin <- c(10, 23, 45, 21, 10)
+kauan <- c(12, 45, 78, 12, 3)
+carol <- c(16, 19, 23, 65, 78)
+
+vendasTotal <- cbind(fogolin, kauan, carol)
+
+dim(vendasTotal) # Saber dimensões (linhas e colunas)
+nrow(vendasTotal) # Número de linhas
+dim(vendasTotal)[1] # Número de linhas
+ncol(vendasTotal) # Número de colunas
+dim(vendasTotal)[2] # Número de colunas
+
+vendasTotal - 2 # Reduzindo 2 de todos os elementos
+sum(vendasTotal[, 1]) # Somando uma coluna
+
+A <- vendasTotal + 5
+B <- vendasTotal
+A + B # Soma de matrizes
