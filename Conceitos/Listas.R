@@ -46,3 +46,11 @@ balanço$Nomes[5] <- "Emanuel" # Adicionando um nome
 balanço$Nomes[6:8] <- c("Lucas", "Rafael", "Miro") # Adicionando mais de um nome
 balanço$Nomes <- balanço$Nomes[-1]  # Removendo um nome
 rownames(balanço$Nomes) <- "Clientes"
+
+# Combinação
+
+informações <- list(Data = "12/10/2024", Gestor = "Leonardo", Mês_Referência = "Julho")
+
+listaFinal <- c(balanço, informações)
+
+names(listaFinal) # Nomes das variáveis
