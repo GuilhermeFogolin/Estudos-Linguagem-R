@@ -21,3 +21,12 @@ data.frame(fornecedores = c("A", "B", "Y", "G", "M"),
 # Criação com vetores
 
 data.frame(V1 = fornecedores, V2 = qtde_Jan)
+
+# Acesso
+
+resumo_df[2, ] # Linha 2
+
+resumo_df[2:4, ] # Linhas 2, 3 e 4
+
+resumo_df$qtde_Jan # Por variável = resumo_df[, 2]
+
