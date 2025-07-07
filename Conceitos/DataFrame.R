@@ -1,0 +1,23 @@
+# Data frame
+
+# Criação
+
+fornecedores <- c("A", "B", "Y", "G", "M")
+qtde_Jan <- c(12, 54, 678, 33, 55)
+qtde_Fev <- c(23, 78, 345, 88, 45)
+qtde_Mar <- c(540, 23, 78, 23, 13)
+
+resumo <- cbind(fornecedores, qtde_Jan, qtde_Fev, qtde_Mar)
+
+resumo_df <- as.data.frame(resumo) # Matriz em data frame
+
+# Criação simplificada
+
+data.frame(fornecedores = c("A", "B", "Y", "G", "M"),
+           qtde_Jan = c(12, 54, 678, 33, 55),
+           qtde_Fev = c(23, 78, 345, 88, 45),
+           qtde_Mar = c(540, 23, 78, 23, 13))
+
+# Criação com vetores
+
+data.frame(V1 = fornecedores, V2 = qtde_Jan)
