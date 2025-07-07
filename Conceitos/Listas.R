@@ -54,3 +54,8 @@ informações <- list(Data = "12/10/2024", Gestor = "Leonardo", Mês_Referência
 listaFinal <- c(balanço, informações)
 
 names(listaFinal) # Nomes das variáveis
+
+# Transformação em vetor
+
+unlist(listaFinal) # Vetor
+unlist(listaFinal)[6] # Acesso
