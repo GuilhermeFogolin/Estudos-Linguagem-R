@@ -59,3 +59,10 @@ names(listaFinal) # Nomes das variáveis
 
 unlist(listaFinal) # Vetor
 unlist(listaFinal)[6] # Acesso
+
+# Teste 07
+
+list(40, matrix(3, 2, 3), c("Recife", "Natal", "Salvador"), sd)
+
+M <- list(40, matrix(3, 2, 3), c("Recife", "Natal", "Salvador"), sd)
+M[2]
