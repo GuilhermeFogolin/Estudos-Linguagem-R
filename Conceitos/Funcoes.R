@@ -68,3 +68,54 @@ for(i in 1:nrow(resumoFinal)) {
       cat("Atenção! O seu pedido de", resumoFinal$qtde_Abr[i], "supera o limite de", resumoFinal$capacidade[i], "unidades! Pedido negado.\n")
   }
 }
+
+# Criação
+
+# 1 - Cadastrar pedidos
+# 2 - Comparar pedidos de acordo com o estoque
+
+tabelaFornecedor <- resumoFinal[, c(1, 6)]
+tabelaFornecedor$Preço <- c(134, 567, 888, 98, 90)
+
+novosPedidos <- function(nome, tabelaFornecedor) {
+  
+  pedidos <- c() # Criando um vetor
+  k <- 0 # Inicializando k
+    
+  while(k == 0) {
+    
+    print("----- Novo pedido -----\n")
+    cat("Temos", nrow(tabelaFornecedor), "fornecedores cadastrados!\n" )
+    
+    for(i in 1:nrow(tabelaFornecedor)) {
+      cat("Quantas unidades você deseja pedir a", tabelaFornecedor$fornecedores[i], "?\n")
+      pedidos[i] <- scan(n = 1) # Apenas um número digitado! Faz o cadastro dos pedidos.
+      
+      # Aprovando ou não o pedido
+      
+      if(pedidos[i] <= tabelaFornecedor$capacidade[i]) {
+        print("Pedido confirmado! Enviado ao fornecedor.\n")
+      } else {
+          if(pedidos[i] < 0.1 * tabelaFornecedor$capacidade[i]) { # Abaixo de 10%
+          cat("Pedido muito baixo! Ele ser maior que", 0.1 * tabelaFornecedor$capacidade[i], "unidades!\n")
+          }  
+        
+          if(pedidos[i] > tabelaFornecedor$capacidade[i]) { # Acima da capacidade
+          cat("Pedido acima do estoque! Ele ser menor que", tabelaFornecedor$capacidade[i], "unidades!\n")
+          }  
+        }
+    } # for
+    
+    print("----- Revisão do pedido -----\n")
+    tabelaFornecedor$Pedidos <- pedidos
+    print(tabelaFornecedor)
+    
+    print("------ Digite 0(Continuar) ou 1(Finalizar)")
+    k <- scan(n = 1)
+    
+    } # while
+  
+  return(tabelaFornecedor)
+}
+
+novosPedidos(nome = "Fogolin", tabelaFornecedor = tabelaFornecedor)
