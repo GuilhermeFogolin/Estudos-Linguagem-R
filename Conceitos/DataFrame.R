@@ -1,4 +1,4 @@
-# Data frame
+# Dataframe
 
 # Criação
 
@@ -30,3 +30,9 @@ resumo_df[2:4, ] # Linhas 2, 3 e 4
 
 resumo_df$qtde_Jan # Por variável = resumo_df[, 2]
 
+# Modificação
+
+resumoFinal <- data.frame(fornecedores, qtde_Jan, qtde_Fev, qtde_Mar)
+str(resumoFinal)
+
+resumoFinal$qtde_Jan <- as.character(resumoFinal$qtde_Jan) # Transformando em caractere
