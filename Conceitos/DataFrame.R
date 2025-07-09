@@ -50,3 +50,12 @@ resumoFinal$qtde_Abr <- c(23, 45, 87, 12, 8)
 # Remover variáveis
 
 resumoFinal <- resumoFinal[, -3]
+
+# Adicionar casos (linhas)
+
+resumoFinal[6, ] <- c("L", 21, 43, 65) 
+
+# Remover linha
+
+resumoFinal <- resumoFinal[-6, ]
+resumoFinal <- resumoFinal[-(c(1, 3)), ] # Mais de uma
