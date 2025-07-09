@@ -45,3 +45,13 @@ while(j == 0) {
   print("Continuar pedido? Sim(0) Não(1)")
   j <- scan()
 }
+
+# IF
+
+resumoFinal$capacidade <- c(400, 768, 900, 1200, 80)
+
+i <- 5
+
+if(resumoFinal$qtde_Abr[i] <= resumoFinal$capacidade[i]) {
+  print("Pedido dentro das capacidades! Aceito.")
+}
