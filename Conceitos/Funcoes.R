@@ -26,3 +26,22 @@ for(i in 1:nrow(resumoFinal)) {
   cat("Você pediu", resumoFinal$qtde_Jan[i], "unidades ao fornecedor",
       resumoFinal$fornecedores[i], ". Pedido confirmado! \n")
 }
+
+# Loop while
+
+i <- 1 # Começa em 1
+
+while(i <= nrow(resumoFinal)) {
+  cat("Você pediu", resumoFinal$qtde_Jan[i], "unidades ao fornecedor",
+      resumoFinal$fornecedores[i], ". Pedido confirmado! \n")
+  i <- i + 1
+}
+
+# Exemplo 02 com while
+
+j <- 0
+
+while(j == 0) {
+  print("Continuar pedido? Sim(0) Não(1)")
+  j <- scan()
+}
