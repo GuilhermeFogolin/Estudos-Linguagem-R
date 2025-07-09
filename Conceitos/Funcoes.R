@@ -46,14 +46,25 @@ while(j == 0) {
   j <- scan()
 }
 
-# IF
+# IF / ELSE
 
 resumoFinal$capacidade <- c(400, 768, 900, 1200, 80)
 
-i <- 5
+i <- 1
 
 if(resumoFinal$qtde_Abr[i] <= resumoFinal$capacidade[i]) {
   print("Pedido dentro das capacidades! Aceito.")
 } else {
   cat("Quantidade acima do estoque de ", resumoFinal$fornecedores[i], ". Pedido recusado.")
+}
+
+# IF / ELSE + for()
+
+for(i in 1:nrow(resumoFinal)) {
+  
+  if(resumoFinal$qtde_Abr[i] <= resumoFinal$capacidade[i]) {
+    print("Dentro das capacidades! Pedido confirmado.")
+  } else {
+      cat("Atenção! O seu pedido de", resumoFinal$qtde_Abr[i], "supera o limite de", resumoFinal$capacidade[i], "unidades! Pedido negado.\n")
+  }
 }
