@@ -42,3 +42,11 @@ resumoFinal$qtde_Jan [5] <- "100" # Mudando um valor
 resumoFinal$qtde_Mar[1:3] <- c(1, 2, 3) # Sequência de valores
 
 resumoFinal$qtde_Fev[c(1, 3)] <- c(27, 28) # Valor aleatório
+
+# Adicionar variáveis
+
+resumoFinal$qtde_Abr <- c(23, 45, 87, 12, 8)
+
+# Remover variáveis
+
+resumoFinal <- resumoFinal[, -3]
