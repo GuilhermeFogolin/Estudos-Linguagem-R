@@ -54,4 +54,6 @@ i <- 5
 
 if(resumoFinal$qtde_Abr[i] <= resumoFinal$capacidade[i]) {
   print("Pedido dentro das capacidades! Aceito.")
+} else {
+  cat("Quantidade acima do estoque de ", resumoFinal$fornecedores[i], ". Pedido recusado.")
 }
