@@ -19,3 +19,9 @@ resumoFinal$qtde_Jan[1] < 34 # Menor
 (resumoFinal$qtde_Jan[1] > 50) & (resumoFinal$qtde_Jan[1] < 55)
 
 (resumoFinal$qtde_Jan[1] > 50) | (resumoFinal$qtde_Jan[1] < 0)
+
+# Loop for
+
+for(i in 1:nrow(resumoFinal)) {
+  
+}
