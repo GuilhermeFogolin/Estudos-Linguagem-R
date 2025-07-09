@@ -59,3 +59,21 @@ resumoFinal[6, ] <- c("L", 21, 43, 65)
 
 resumoFinal <- resumoFinal[-6, ]
 resumoFinal <- resumoFinal[-(c(1, 3)), ] # Mais de uma
+
+# Operações
+
+ncol(resumoFinal) # Colunas
+
+nrow(resumoFinal) # Linhas
+
+dim(resumoFinal) # Linhas e colunas
+
+length(resumoFinal$qtde_Jan) # Tamanho de uma variável
+
+names(resumoFinal) # Nome das variáveis
+
+View(resumoFinal) # Visão igual Excel
+
+summary(resumoFinal) # Cálculos comuns para somente números
+
+mean(resumoFinal$qtde_Jan) # Média
