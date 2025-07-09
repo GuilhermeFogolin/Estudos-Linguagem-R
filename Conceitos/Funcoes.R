@@ -23,5 +23,6 @@ resumoFinal$qtde_Jan[1] < 34 # Menor
 # Loop for
 
 for(i in 1:nrow(resumoFinal)) {
-  
+  cat("Você pediu", resumoFinal$qtde_Jan[i], "unidades ao fornecedor",
+      resumoFinal$fornecedores[i], ". Pedido confirmado! \n")
 }
