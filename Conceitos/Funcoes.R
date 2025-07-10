@@ -93,13 +93,14 @@ novosPedidos <- function(nome, tabelaFornecedor) {
       
       # Aprovando ou não o pedido
       
-      if(pedidos[i] <= tabelaFornecedor$capacidade[i]) {
-        print("Pedido confirmado! Enviado ao fornecedor.\n")
-      } else {
-          if(pedidos[i] < 0.1 * tabelaFornecedor$capacidade[i]) { # Abaixo de 10%
-          cat("Pedido muito baixo! Ele ser maior que", 0.1 * tabelaFornecedor$capacidade[i], "unidades!\n")
-          }  
-        
+      if(pedidos[i] < 0.1 * tabelaFornecedor$capacidade[i]) { # Abaixo de 10%
+        cat("Pedido muito baixo! Ele ser maior que", 0.1 * tabelaFornecedor$capacidade[i], "unidades!\n")
+      }  
+    
+      else {
+          if(pedidos[i] <= tabelaFornecedor$capacidade[i]) {
+            print("Pedido confirmado! Enviado ao fornecedor.\n")
+          } 
           if(pedidos[i] > tabelaFornecedor$capacidade[i]) { # Acima da capacidade
           cat("Pedido acima do estoque! Ele ser menor que", tabelaFornecedor$capacidade[i], "unidades!\n")
           }  
